@@ -1,0 +1,153 @@
+#:kivy 2.0
+
+
+MDBoxLayout:
+
+    
+   
+    orientation: "vertical"
+    
+
+    
+        
+    MDBottomNavigation:
+        id: panel
+        
+        MDBottomNavigationItem:
+            name: "PROCESSES"
+            text: self.name
+            on_tab_press: app.updatePageIndex(self.name)
+            
+            BoxLayout:
+                size: self.parent.size  
+                pos: self.parent.pos  
+                orientation: 'vertical'
+                
+                MDLabel:
+                    font_style: "Body1"
+                    theme_text_color: "Primary"
+                    text: "Processes"
+                    halign: "center"
+                
+                MDList:
+                    id: proc
+
+        MDBottomNavigationItem:
+            name: "DISKS"
+            text: self.name
+            on_tab_press: app.updatePageIndex(self.name)
+            
+            BoxLayout:
+                size: self.parent.size  
+                pos: self.parent.pos  
+                orientation: 'vertical'
+                
+                MDLabel:
+                    font_style: "Body1"
+                    theme_text_color: "Primary"
+                    text: "DISKS"
+                    halign: "center"
+                
+                MDList:
+                    id: disks_id
+                        
+        MDBottomNavigationItem:
+            name: "CPU"
+            text: self.name
+            on_tab_press: app.updatePageIndex(self.name)
+            
+            BoxLayout:
+                size: self.parent.size  
+                pos: self.parent.pos  
+                orientation: 'vertical'
+                MDLabel:
+                    font_style: "Body1"
+                    theme_text_color: "Primary"
+                    halign: "center"
+                    text: ''
+                MDLabel:
+                    font_style: "Body1"
+                    theme_text_color: "Primary"
+                    halign: "center"
+                    text: 'CPU Information'
+                    
+                MDLabel:
+                    font_style: "Body1"
+                    theme_text_color: "Primary"
+                    halign: "center"
+                    text: 'loading'
+                    id: cpu_cores
+                MDLabel:
+                    font_style: "Body1"
+                    theme_text_color: "Primary"
+                    halign: "center"
+                    text: 'loading'
+                    id: cpu_threads
+                MDLabel:
+                    font_style: "Body1"
+                    theme_text_color: "Primary"
+                    halign: "center"
+                    text: 'loading'
+                    id: cpu_usage
+                MDLabel:
+                    font_style: "Body1"
+                    theme_text_color: "Primary"
+                    halign: "center"
+                    text: 'loading'
+                    id: cpu_maxfreq
+
+        MDBottomNavigationItem:
+            name: "RAM"
+            text: self.name
+            on_tab_press: app.updatePageIndex(self.name)
+            
+            BoxLayout:
+                size: self.parent.size  
+                pos: self.parent.pos  
+                orientation: 'vertical'
+                
+                MDLabel:
+                    font_style: "Body1"
+                    theme_text_color: "Primary"
+                    text: "RAM Information"
+                    halign: "center"
+                    
+                MDLabel:
+                    font_style: "Body1"
+                    theme_text_color: "Primary"
+                    halign: "center"
+                    text: 'loading'
+                    id: ram_total
+                MDLabel:
+                    font_style: "Body1"
+                    theme_text_color: "Primary"
+                    halign: "center"
+                    text: 'loading'
+                    id: ram_available
+                MDLabel:
+                    font_style: "Body1"
+                    theme_text_color: "Primary"
+                    halign: "center"
+                    text: 'loading'
+                    id: ram_percent
+                MDLabel:
+                    font_style: "Body1"
+                    theme_text_color: "Primary"
+                    halign: "center"
+                    text: 'loading'
+                    id: ram_used
+                MDLabel:
+                    font_style: "Body1"
+                    theme_text_color: "Primary"
+                    halign: "center"
+                    text: 'loading'
+                    id: ram_free
+
+        
+                    
+                       
+
+
+                
+
+        
